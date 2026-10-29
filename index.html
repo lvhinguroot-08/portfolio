@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#050608" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="description" content="Love Hingu — Cyber Security enthusiast pursuing graduation at Ganpat University, aspiring SOC Analyst Level 1. Building practical security projects focused on security visibility, alert monitoring, and cyber security engineering." />
+    <meta name="keywords" content="Love Hingu, Cyber Security, SOC Analyst, SIEM, Wazuh, EDR, XDR, Network Security, LVShieldCore, PHANTOM:360, Ganpat University" />
+    <meta name="author" content="Love Hingu" />
+    <meta property="og:title" content="Love Hingu — Cyber Security | SOC Analyst L1 Candidate" />
+    <meta property="og:description" content="Cyber Security enthusiast building practical security monitoring and intelligence projects. Explore LVShieldCore, PHANTOM:360, and LVTrade." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lovehingu.in/" />
+    <meta property="og:image" content="https://lovehingu.in/src/AUTHOR/portrait.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Love Hingu — Cyber Security Portfolio" />
+    <meta name="twitter:description" content="Cyber Security enthusiast building practical systems for security visibility and alert monitoring." />
+    <meta name="twitter:image" content="https://lovehingu.in/src/AUTHOR/portrait.png" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://lovehingu.in/" />
+    <title>Love Hingu — Cyber Security | SOC Analyst L1 Candidate</title>
+    
+    <!-- Favicon: Circular Logo with Love Hingu's Photo -->
+    <link rel="icon" type="image/png" href="src/AUTHOR/portrait.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Love Hingu",
+      "alternateName": "Love N Hingu",
+      "url": "https://lovehingu.in",
+      "image": "https://lovehingu.in/src/AUTHOR/portrait.png",
+      "jobTitle": "SOC Analyst L1 Candidate",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Ganpat University"
+      },
+      "knowsAbout": [
+        "Cyber Security",
+        "Network Security",
+        "Security Information and Event Management (SIEM)",
+        "Wazuh",
+        "Endpoint Detection and Response (EDR)",
+        "Extended Detection and Response (XDR)",
+        "Security Monitoring",
+        "Threat Detection"
+      ],
+      "email": "lvhingu.sec@gmail.com",
+      "telephone": "+919638259382",
+      "sameAs": [
+        "https://www.linkedin.com/in/love-n-hingu-5201b6396/"
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- Custom Interactive Cyber Cursor (Hidden on touch devices) -->
+    <div id="custom-cursor" class="custom-cursor" aria-hidden="true">
+      <div class="cursor-dot"></div>
+      <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Initial Loading State with Love Hingu Photo as Logo -->
+    <div id="loader" class="loader" aria-hidden="true">
+      <div class="loader-inner">
+        <div class="loader-logo-wrap">
+          <div class="loader-avatar-ring">
+            <img src="src/AUTHOR/portrait.png" alt="Love Hingu" class="loader-avatar-img" />
+          </div>
+        </div>
+        <div class="loader-brand">LOVE HINGU</div>
+        <div class="loader-bar"><div class="loader-progress"></div></div>
+        <div class="loader-status">INITIALIZING SECURE SOC CONSOLE…</div>
+      </div>
+    </div>
+
+    <!-- 3D Interactive WebGL Canvas with Transparent Background -->
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+    <!-- Navigation Header with Photo as Logo -->
+    <header class="nav-header" id="nav-header">
+      <div class="nav-wrap">
+        <!-- Logo: Love Hingu Photo as Logo -->
+        <a class="brand-link" href="#hero" aria-label="Love Hingu — Home">
+          <div class="brand-photo-logo">
+            <img src="src/AUTHOR/portrait.png" alt="Love Hingu" class="brand-photo-img" />
+          </div>
+          <span class="brand-name">
+            <strong>LOVE</strong> <span class="brand-surname">HINGU</span>
+          </span>
+        </a>
+
+        <!-- Mobile Navigation Hamburger -->
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+          <span class="hamburger"></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Primary Navigation">
+          <a href="#hero" data-nav class="nav-link">Home</a>
+          <a href="#about" data-nav class="nav-link">About</a>
+          <a href="#projects" data-nav class="nav-link">Projects</a>
+          <a href="#skills" data-nav class="nav-link">Skills</a>
+          <a href="#contact" data-nav class="nav-cta">
+            <span>Connect</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+
+      <!-- ═══════════════ HERO SECTION ═══════════════ -->
+      <section id="hero" class="hero">
+        <div class="hero-container wrap">
+          <!-- Status Pill -->
+          <div class="hero-top-badge anim-up">
+            <span class="status-beacon"></span>
+            <span class="status-text">OPEN TO SOC ANALYST LEVEL 1 OPPORTUNITIES</span>
+          </div>
+
+          <!-- Bold Typography with Integrated Portrait Capsule -->
+          <div class="hero-center-stage anim-up">
+            <div class="hero-display-name">
+              <div class="display-row display-row--top">
+                <span class="blur-text-word" data-blur-text="LOVE">LOVE</span>
+              </div>
+              <div class="display-row display-row--bottom">
+                <span class="blur-text-word" data-blur-text="HINGU">HINGU</span>
+              </div>
+
+              <!-- Center Portrait Capsule Badge -->
+              <div class="hero-center-avatar">
+                <div class="avatar-capsule">
+                  <img 
+                    src="src/AUTHOR/portrait.png" 
+                    alt="Love Hingu — Cyber Security and SOC Analyst L1 Candidate" 
+                    class="avatar-capsule-img"
+                    loading="eager"
+                  />
+                  <div class="avatar-capsule-glow" aria-hidden="true"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role & Tagline -->
+          <div class="hero-bottom-info anim-up">
+            <div class="hero-role-tag">
+              <span class="role-primary">Cyber Security</span>
+              <span class="role-sep">/</span>
+              <span class="role-secondary">SOC Analyst L1 Candidate</span>
+            </div>
+
+            <p class="hero-statement blur-text-para">
+              I build practical security projects focused on security visibility, alert monitoring, and cyber security engineering.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <span>Explore My Projects</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M8 3V13M8 13L12.5 8.5M8 13L3.5 8.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn-glass">
+                <span>Contact Me</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M3 11L11 3M11 3H5.5M11 3V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metric Ribbon -->
+        <div class="metric-ribbon wrap anim-up">
+          <div class="ribbon-col">
+            <span class="ribbon-index">01</span>
+            <span class="ribbon-title">NETWORK SECURITY</span>
+            <span class="ribbon-desc">Traffic analysis &amp; defense foundations</span>
+          </div>
+          <div class="ribbon-col">
+            <span class="ribbon-index">02</span>
+            <span class="ribbon-title">SIEM &amp; WAZUH</span>
+            <span class="ribbon-desc">Telemetry aggregation &amp; rules</span>
+          </div>
+          <div class="ribbon-col">
+            <span class="ribbon-index">03</span>
+            <span class="ribbon-title">EDR / XDR</span>
+            <span class="ribbon-desc">Endpoint correlation &amp; host audit</span>
+          </div>
+          <div class="ribbon-col">
+            <span class="ribbon-index">04</span>
+            <span class="ribbon-title">GANPAT UNIVERSITY</span>
+            <span class="ribbon-desc">B.Sc. IT — Cyber Security</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ ABOUT SECTION ═══════════════ -->
+      <section id="about" class="about">
+        <div class="wrap">
+          <div class="section-badge anim-up">
+            <span class="badge-num">01</span>
+            <span class="badge-name">ABOUT LOVE HINGU</span>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-lead anim-up">
+              <h2>Curious by nature.<br /><em>Methodical</em> by habit.</h2>
+              <div class="lead-accent-line"></div>
+            </div>
+
+            <div class="about-content anim-up">
+              <p class="about-highlight">
+                I am a Cyber Security enthusiast focused on practical security monitoring, network security, and security engineering projects.
+              </p>
+              <p>
+                My interest lies where monitoring, investigation, and network security meet. I'm especially engaged with SIEM tooling, Wazuh, and EDR/XDR concepts — building practical projects to develop hands-on understanding of security operations.
+              </p>
+
+              <div class="about-spec-cards">
+                <div class="spec-card">
+                  <div class="spec-header">
+                    <span class="spec-badge">ACADEMIC FOUNDATION</span>
+                  </div>
+                  <h3 class="spec-title">B.Sc. IT — Cyber Security</h3>
+                  <p class="spec-detail">Graduation in progress at Ganpat University</p>
+                </div>
+
+                <div class="spec-card">
+                  <div class="spec-header">
+                    <span class="spec-badge">CAREER OBJECTIVE</span>
+                  </div>
+                  <h3 class="spec-title">SOC Analyst Level 1</h3>
+                  <p class="spec-detail">Open to SOC Analyst Level 1 opportunities</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ PROJECTS SECTION (WITH IMAGE INSPECTOR) ═══════════════ -->
+      <section id="projects" class="projects">
+        <div class="wrap">
+          <div class="section-badge anim-up">
+            <span class="badge-num">02</span>
+            <span class="badge-name">PRACTICAL SECURITY WORK</span>
+          </div>
+
+          <div class="section-intro anim-up">
+            <h2>Built to make<br />security <em>visible.</em></h2>
+            <p>Three applied projects spanning security operations dashboarding, surveillance intelligence, and predictive analytics. Click any image or button to inspect screenshots.</p>
+          </div>
+
+          <!-- PROJECT 01: LVShieldCore (Primary Featured Project) -->
+          <article class="project-flagship anim-up" id="project-shieldcore">
+            <div class="flagship-visual">
+              <div class="flagship-frame">
+                <img 
+                  src="src/LV-SHILDCORE/shieldcore-dashboard.jpg" 
+                  alt="LVShieldCore Operations Overview — live endpoint monitoring and telemetry stream" 
+                  class="flagship-img flagship-img-top inspectable" 
+                  data-gallery="shieldcore"
+                  data-index="0"
+                  loading="lazy" 
+                />
+                <img 
+                  src="src/LV-SHILDCORE/shieldcore-telemetry.jpg" 
+                  alt="LVShieldCore Telemetry Explorer — Sysmon Event ID 1 telemetry data table" 
+                  class="flagship-img flagship-img-backdrop inspectable" 
+                  data-gallery="shieldcore"
+                  data-index="1"
+                  loading="lazy" 
+                />
+              </div>
+              <div class="visual-tag-strip">
+                <span class="tag-status">● VERIFIED WORKING BUILD</span>
+                <button class="inspect-btn" data-open-gallery="shieldcore" aria-label="Inspect LVShieldCore screenshots">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                  <span>Inspect Screenshots (4)</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="flagship-details">
+              <div class="project-meta-row">
+                <span class="meta-num">PROJECT 01</span>
+                <span class="meta-tag">SIEM DASHBOARD</span>
+                <span class="meta-status">WORKING BUILD</span>
+              </div>
+
+              <h3 class="flagship-title">LV<span>Shield</span>Core</h3>
+
+              <p class="flagship-desc">
+                A SIEM-style security dashboard designed for endpoint monitoring and forensic visibility. The current working build includes an operations overview with live telemetry stream, a telemetry explorer for searching and filtering Sysmon Event ID 1 data, and an alert monitoring view.
+              </p>
+
+              <div class="verified-features">
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke="#C3E41D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Operations Overview Dashboard</span>
+                </div>
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke="#C3E41D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Alert Monitoring &amp; Event Filtering</span>
+                </div>
+                <div class="feature-item">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke="#C3E41D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Sysmon Event ID 1 Telemetry Explorer</span>
+                </div>
+              </div>
+
+              <div class="tech-pills">
+                <span>SIEM</span>
+                <span>Endpoint Telemetry</span>
+                <span>Sysmon Event ID 1</span>
+                <span>Alert Monitoring</span>
+              </div>
+
+              <div class="flagship-actions">
+                <button class="btn btn-inspect" data-open-gallery="shieldcore">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                  <span>Inspect All 4 Images</span>
+                </button>
+                <a href="#contact" class="action-link">
+                  <span>Request Walkthrough</span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M2.5 7H11.5M11.5 7L7.5 3M11.5 7L7.5 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECTS 02 & 03: PHANTOM:360 and LVTrade -->
+          <div class="project-duo">
+            <!-- PROJECT 02: PHANTOM:360 -->
+            <article class="duo-card anim-up" id="project-phantom">
+              <div class="duo-visual">
+                <img 
+                  src="src/PHANTOM/phantom-dashboard.png" 
+                  alt="PHANTOM:360 statewide CCTV monitoring matrix with AI inference engine" 
+                  loading="lazy" 
+                  class="duo-img inspectable"
+                  data-gallery="phantom"
+                  data-index="0"
+                />
+                <div class="duo-visual-overlay"></div>
+                <button class="inspect-floating-btn" data-open-gallery="phantom" aria-label="Inspect PHANTOM:360 screenshots">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                  <span>Inspect (6 Images)</span>
+                </button>
+              </div>
+
+              <div class="duo-body">
+                <div class="project-meta-row">
+                  <span class="meta-num">PROJECT 02</span>
+                  <span class="meta-tag">HACKATHON PROJECT</span>
+                </div>
+
+                <h3 class="duo-title">PHANTOM:<em>360</em></h3>
+
+                <p class="duo-desc">
+                  A CCTV surveillance and video intelligence hackathon project developed for the Gujarat Police Hackathon. The system demonstrates a statewide camera monitoring matrix with live video feeds, AI inference integration using YOLOv8 for automated detection, ANPR capabilities, and a dedicated commander access portal.
+                </p>
+
+                <div class="tech-pills">
+                  <span>Surveillance Intelligence</span>
+                  <span>YOLOv8</span>
+                  <span>CCTV Matrix</span>
+                  <span>ANPR</span>
+                </div>
+
+                <button class="btn btn-inspect-link" data-open-gallery="phantom">
+                  <span>View All Screenshots &rarr;</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- PROJECT 03: LVTrade -->
+            <article class="duo-card anim-up" id="project-lvtrade">
+              <div class="duo-visual">
+                <img 
+                  src="src/LV-TRADE/lvtrade-overview.png" 
+                  alt="LVTrade quantitative market prediction engine and backtesting platform" 
+                  loading="lazy" 
+                  class="duo-img inspectable"
+                  data-gallery="lvtrade"
+                  data-index="0"
+                />
+                <div class="duo-visual-overlay"></div>
+                <button class="inspect-floating-btn" data-open-gallery="lvtrade" aria-label="Inspect LVTrade screenshots">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                  <span>Inspect (4 Images)</span>
+                </button>
+              </div>
+
+              <div class="duo-body">
+                <div class="project-meta-row">
+                  <span class="meta-num">PROJECT 03</span>
+                  <span class="meta-tag">EARLY PROJECT</span>
+                </div>
+
+                <h3 class="duo-title">LV<em>Trade</em></h3>
+
+                <p class="duo-desc">
+                  A stock market prediction and quantitative analysis platform representing the starting point of my project-building journey. Features an interactive market terminal with candlestick charts, AI decision analytics with indicators, a machine learning training hub utilizing Random Forest and XGBoost classifiers, and historical backtesting simulation.
+                </p>
+
+                <div class="tech-pills">
+                  <span>ML Modeling</span>
+                  <span>Quantitative Analytics</span>
+                  <span>Random Forest</span>
+                  <span>XGBoost</span>
+                </div>
+
+                <button class="btn btn-inspect-link" data-open-gallery="lvtrade">
+                  <span>View All Screenshots &rarr;</span>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ TECHNICAL SKILLS SECTION ═══════════════ -->
+      <section id="skills" class="skills">
+        <div class="wrap">
+          <div class="section-badge anim-up">
+            <span class="badge-num">03</span>
+            <span class="badge-name">TECHNICAL FOCUS AREAS</span>
+          </div>
+
+          <div class="section-intro anim-up">
+            <h2>Applied skills &amp;<br /><em>core interests.</em></h2>
+            <p>Stated technical interests and practical competencies developed through coursework, lab environments, and project engineering.</p>
+          </div>
+
+          <div class="skills-quad">
+            <div class="skill-tile anim-up">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 8v4M12 16h.01" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="skill-num">01</span>
+              <h3 class="skill-name">Network<br />Security</h3>
+              <p class="skill-detail">
+                Building foundational understanding of network architecture, protocol analysis, traffic packet inspection, port auditing, and perimeter defense strategies.
+              </p>
+            </div>
+
+            <div class="skill-tile anim-up">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <path d="M8 21h8M12 17v4"/>
+                  <path d="M6 10l3-3 3 3 6-6"/>
+                </svg>
+              </div>
+              <span class="skill-num">02</span>
+              <h3 class="skill-name">Security<br />Monitoring</h3>
+              <p class="skill-detail">
+                Focusing on alert triage visibility, log aggregation, event correlation, false-positive reduction, and standard SOC Level 1 operational workflows.
+              </p>
+            </div>
+
+            <div class="skill-tile anim-up">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                  <path d="M14 2v6h6"/>
+                  <path d="M16 13H8M16 17H8M10 9H8"/>
+                </svg>
+              </div>
+              <span class="skill-num">03</span>
+              <h3 class="skill-name">SIEM &amp;<br />Wazuh</h3>
+              <p class="skill-detail">
+                Hands-on practical exploration of Security Information and Event Management, specifically Wazuh agent deployments, rule configuration, and centralized event indexing.
+              </p>
+            </div>
+
+            <div class="skill-tile anim-up">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="12" cy="12" r="9"/>
+                  <path d="M12 3v18M3 12h18"/>
+                  <circle cx="12" cy="12" r="4"/>
+                </svg>
+              </div>
+              <span class="skill-num">04</span>
+              <h3 class="skill-name">EDR &amp;<br />XDR</h3>
+              <p class="skill-detail">
+                Studying host-level telemetry, process creation trees, Sysmon logging, and cross-layered extended detection mechanisms across modern security stacks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ PROFESSIONAL DIRECTION SECTION ═══════════════ -->
+      <section class="direction">
+        <div class="wrap">
+          <div class="direction-container anim-up">
+            <div class="section-badge">
+              <span class="badge-num">04</span>
+              <span class="badge-name">PROFESSIONAL DIRECTION</span>
+            </div>
+
+            <div class="direction-grid">
+              <div class="direction-lead">
+                <h2>Targeted career path:<br /><em>SOC Analyst L1</em></h2>
+                <p>
+                  I am actively seeking SOC Analyst Level 1 roles where I can contribute to real-time incident monitoring, alert triage, log investigation, and practical defense operations.
+                </p>
+              </div>
+
+              <div class="direction-benchmarks">
+                <div class="benchmark-item">
+                  <div class="benchmark-dot"></div>
+                  <div class="benchmark-content">
+                    <h4>Open to SOC Analyst Level 1 opportunities</h4>
+                    <p>Ready to bring disciplined attention to 24/7 security operations, ticket triage, and alert verification.</p>
+                  </div>
+                </div>
+
+                <div class="benchmark-item">
+                  <div class="benchmark-dot"></div>
+                  <div class="benchmark-content">
+                    <h4>Applied SIEM &amp; Log Investigation</h4>
+                    <p>Continuously building practical lab experience with Sysmon telemetry, Wazuh, and event correlation.</p>
+                  </div>
+                </div>
+
+                <div class="benchmark-item">
+                  <div class="benchmark-dot"></div>
+                  <div class="benchmark-content">
+                    <h4>Graduation in progress at Ganpat University</h4>
+                    <p>Enrolled in B.Sc. IT with specialized curriculum in Cyber Security and network infrastructure.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ CONTACT SECTION ═══════════════ -->
+      <section id="contact" class="contact">
+        <div class="wrap">
+          <div class="section-badge anim-up">
+            <span class="badge-num">05</span>
+            <span class="badge-name">INITIATE CONTACT</span>
+          </div>
+
+          <div class="contact-frame anim-up">
+            <div class="contact-header">
+              <h2>Have an opportunity<br />worth <em>securing?</em></h2>
+              <p>
+                For SOC Analyst Level 1 opportunities, technical interviews, or project discussions, I welcome professional inquiries.
+              </p>
+            </div>
+
+            <div class="contact-directory">
+              <!-- Direct Email -->
+              <a href="mailto:lvhingu.sec@gmail.com" class="directory-row">
+                <div class="row-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                    <path d="M22 6L12 13 2 6"/>
+                  </svg>
+                </div>
+                <div class="row-info">
+                  <span class="row-channel">DIRECT EMAIL</span>
+                  <span class="row-data">lvhingu.sec@gmail.com</span>
+                </div>
+                <div class="row-arrow">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M3 11L11 3M11 3H5.5M11 3V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </a>
+
+              <!-- Direct Telephone -->
+              <a href="tel:+919638259382" class="directory-row">
+                <div class="row-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.86 19.86 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.86 19.86 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                  </svg>
+                </div>
+                <div class="row-info">
+                  <span class="row-channel">TELEPHONE</span>
+                  <span class="row-data">+91 96382 59382</span>
+                </div>
+                <div class="row-arrow">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M3 11L11 3M11 3H5.5M11 3V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/love-n-hingu-5201b6396/" target="_blank" rel="noopener noreferrer" class="directory-row">
+                <div class="row-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                  </svg>
+                </div>
+                <div class="row-info">
+                  <span class="row-channel">LINKEDIN PROFILE</span>
+                  <span class="row-data">linkedin.com/in/love-n-hingu-5201b6396</span>
+                </div>
+                <div class="row-arrow">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M3 11L11 3M11 3H5.5M11 3V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ═══════════════ FULL-SCREEN INTERACTIVE IMAGE INSPECTOR MODAL ═══════════════ -->
+    <div id="image-inspector" class="image-inspector" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project Screenshot Inspector">
+      <div class="inspector-backdrop"></div>
+      
+      <div class="inspector-container">
+        <!-- Inspector Header -->
+        <div class="inspector-header">
+          <div class="inspector-title-wrap">
+            <span class="inspector-category" id="inspector-category">PROJECT EVIDENCE</span>
+            <h3 class="inspector-project-name" id="inspector-project-name">LVShieldCore</h3>
+          </div>
+
+          <div class="inspector-controls">
+            <span class="inspector-counter" id="inspector-counter">1 / 4</span>
+            <button class="inspector-close-btn" id="inspector-close-btn" aria-label="Close Inspector">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Main Image Display Viewport -->
+        <div class="inspector-viewport">
+          <button class="inspector-nav-btn inspector-prev" id="inspector-prev" aria-label="Previous screenshot">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+
+          <div class="inspector-image-stage">
+            <img src="" alt="" id="inspector-main-img" class="inspector-main-img" />
+          </div>
+
+          <button class="inspector-nav-btn inspector-next" id="inspector-next" aria-label="Next screenshot">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+
+        <!-- Inspector Footer with Caption & Thumbnails -->
+        <div class="inspector-footer">
+          <p class="inspector-caption" id="inspector-caption">Screenshot caption details</p>
+          <div class="inspector-thumb-strip" id="inspector-thumb-strip">
+            <!-- Dynamically populated thumbnails -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════ FOOTER WITH PHOTO AS LOGO ═══════════════ -->
+    <footer class="footer">
+      <div class="wrap footer-content">
+        <!-- Logo: Love Hingu Photo as Logo -->
+        <a class="brand-link" href="#hero" aria-label="Love Hingu — Home">
+          <div class="brand-photo-logo">
+            <img src="src/AUTHOR/portrait.png" alt="Love Hingu" class="brand-photo-img" />
+          </div>
+          <span class="brand-name">
+            <strong>LOVE</strong> <span class="brand-surname">HINGU</span>
+          </span>
+        </a>
+
+        <div class="footer-center">
+          <p class="copyright-text">
+            &copy; <span id="year"></span> Love Hingu. Designed with deliberate intent.
+          </p>
+          <p class="credential-notice">
+            Graduation in progress at Ganpat University · B.Sc. IT Cyber Security
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <a href="mailto:lvhingu.sec@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/love-n-hingu-5201b6396/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="#hero">Back to top ↑</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Three.js (r128) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
